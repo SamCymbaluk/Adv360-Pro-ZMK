@@ -19,6 +19,123 @@
             flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
+        mm_1: mm_1 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_1";
+            bindings = <&kp N1>, <&kp ASTERISK>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_2: mm_2 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_2";
+            bindings = <&kp N2>, <&kp LBKT>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_3: mm_3 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_3";
+            bindings = <&kp N3>, <&kp LPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_4: mm_4 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_4";
+            bindings = <&kp N4>, <&kp LBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT)>;
+        };
+
+        mm_5: mm_5 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_5";
+            bindings = <&kp N5>, <&kp EQUAL>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_6: mm_6 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_6";
+            bindings = <&kp N6>, <&kp PLUS>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
+        };
+
+        mm_7: mm_7 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_7";
+            bindings = <&kp N7>, <&kp RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_8: mm_8 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_8";
+            bindings = <&kp N8>, <&kp RBRC>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_9: mm_9 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_9";
+            bindings = <&kp N9>, <&kp RPAR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_0: mm_0 {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_0";
+            bindings = <&kp N0>, <&kp AMPERSAND>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_at_dllr: mm_at_dllr {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_AT_DLLR";
+            bindings = <&kp AT_SIGN>, <&kp DLLR>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_excl_hash: mm_excl_hash {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_EXCL_HASH";
+            bindings = <&kp EXCL>, <&kp HASH>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+
+        mm_prcnt_caret: mm_prcnt_caret {
+            compatible = "zmk,behavior-mod-morph";
+            label = "MM_PRCNT_CARET";
+            bindings = <&kp PRCNT>, <&kp CARET>;
+
+            #binding-cells = <0>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
     };
 
     keymap {
@@ -27,11 +144,11 @@
         default_layer {
             display-name = "Base";
             bindings = <
-&kp EQUAL  &kp N1     &kp N2    &kp N3    &kp N4     &kp N5  &tog 1                                                           &mo 3      &kp N6  &kp N7  &kp N8     &kp N9    &kp N0    &kp MINUS
-&kp TAB    &kp Q      &kp W     &kp E     &kp R      &kp T   &none                                                            &none      &kp Y   &kp U   &kp I      &kp O     &kp P     &kp BSLH
-&kp ESC    &kp A      &kp S     &kp D     &kp F      &kp G   &none     &kp LCTRL       &kp LGUI      &kp LS(LALT)  &kp RCTRL  &none      &kp H   &kp J   &kp K      &kp L     &kp SEMI  &kp SQT
-&kp LSHFT  &kp Z      &kp X     &kp C     &kp V      &kp B                             &kp HOME      &kp PG_UP                           &kp N   &kp M   &kp COMMA  &kp DOT   &kp FSLH  &kp RSHFT
-&mo 2      &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT          &kp BSPC  &kp LEFT_SHIFT  &kp END       &kp PG_DN     &kp ENTER  &kp SPACE          &kp UP  &kp DOWN   &kp LBKT  &kp RBKT  &mo 2
+&kp LG(LS(Z))  &mm_1      &mm_2     &mm_3     &mm_4      &mm_5  &tog 1                                                           &mo 3      &mm_6  &mm_7   &mm_8      &mm_9          &mm_0            &mm_at_dllr
+&kp TAB        &kp Q      &kp W     &kp E     &kp R      &kp T  &none                                                            &none      &kp Y  &kp U   &kp I      &kp O          &kp P            &kp BSLH
+&kp ESC        &kp A      &kp S     &kp D     &kp F      &kp G  &none     &kp LCTRL       &kp LGUI      &kp LS(LALT)  &kp RCTRL  &none      &kp H  &kp J   &kp K      &kp L          &kp SEMI         &kp SQT
+&kp LSHFT      &kp Z      &kp X     &kp C     &kp V      &kp B                            &kp HOME      &kp PG_UP                           &kp N  &kp M   &kp COMMA  &kp DOT        &kp FSLH         &kp MINUS
+&mo 2          &kp GRAVE  &kp CAPS  &kp LEFT  &kp RIGHT         &kp BSPC  &kp LEFT_SHIFT  &kp END       &kp PG_DN     &kp ENTER  &kp SPACE         &kp UP  &kp DOWN   &mm_excl_hash  &mm_prcnt_caret  &mo 2
             >;
         };
 
