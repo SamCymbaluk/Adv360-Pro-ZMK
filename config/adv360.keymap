@@ -41,7 +41,7 @@
         mm_3: mm_3 {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_3";
-            bindings = <&kp N3>, <&kp LPAR>;
+            bindings = <&kp N3>, <&kp LBRC>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
@@ -50,10 +50,10 @@
         mm_4: mm_4 {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_4";
-            bindings = <&kp N4>, <&kp LBRC>;
+            bindings = <&kp N4>, <&kp LPAR>;
 
             #binding-cells = <0>;
-            mods = <(MOD_RSFT)>;
+            mods = <(MOD_RSFT|MOD_LSFT)>;
         };
 
         mm_5: mm_5 {
@@ -95,7 +95,7 @@
         mm_9: mm_9 {
             compatible = "zmk,behavior-mod-morph";
             label = "MM_9";
-            bindings = <&kp N9>, <&kp RPAR>;
+            bindings = <&kp N9>, <&kp RBKT>;
 
             #binding-cells = <0>;
             mods = <(MOD_LSFT|MOD_RSFT)>;
